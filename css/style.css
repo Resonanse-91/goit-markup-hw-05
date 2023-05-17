@@ -23,6 +23,8 @@ ul {
 /* Header */
 
 .header {
+  position: relative;
+
   background: var(--header-cl);
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -110,7 +112,7 @@ img {
   outline-offset: -2px; */
 }
 
-.nav-link {
+.nav-link { 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -118,6 +120,27 @@ img {
   color: var(--main-txt-cl);
   display: block;
   padding: 24px 0;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  border-radius: 2px;
+}
+
+.nav-link.active::after {
+  background-color: var(--btn-f-bg);
+}
+
+.nav-link.active{
+  color: var(--btn-f-bg);
 }
 
 .item:hover,
@@ -255,10 +278,37 @@ img {
   letter-spacing: 0.02em;
   color: var(--main-txt-cl);
   margin-bottom: 8px;
-  /* margin-left: 16px; */
   font-family: var(--primary-font);
   text-decoration: none;
   font-style: normal;
+}
+
+.poster-thumb {
+  position: relative;
+}
+
+/**
+  |============================
+  | Overlay
+  |============================
+*/
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 32px;
+
+  width: 100%;
+  height: 100%;
+  
+
+
+}
+
+.overlay-text {
+  color: var(--main-footer-cl);
+  
 }
 
 .desc {
@@ -629,3 +679,54 @@ img {
 .emblem-logo-icon {
   fill: currentColor;
 }
+
+/**
+  |============================
+  | Modal window
+  |============================
+*/
+
+.backdrop {
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(46, 47, 66, 0.4);
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.modal {
+  position: absolute;
+  top: calc(50% - 204px);
+  left: calc(50% - 292px);
+
+
+  width: 408px;
+  height: 584px;
+
+  background-color: #fff;
+}
+.modal-close-window {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+  padding: 0;
+
+  border-radius: 50%;
+  border: none;
+  background-color: var(--secondary-txt-cl);
+}
+.modal-close-icon {
+  fill: var(--header-cl);
+}
+
+
