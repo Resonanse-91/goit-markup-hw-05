@@ -583,12 +583,9 @@ img {
   width: calc((100% - 48px) / 3);
 }
 
-.poster-item {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .link-card {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-card:hover {
