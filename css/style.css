@@ -622,7 +622,7 @@ img {
 .poster-item:hover .overlay-text {
   transform: translateY(0%);
 }
-.poster-item:focus.overlay-text {
+.poster-item:focus .overlay-text {
   transform: translateY(0%);
 }
 
