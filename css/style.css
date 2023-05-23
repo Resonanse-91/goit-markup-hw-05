@@ -636,8 +636,8 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.poster-thumb:hover, .poster-text,
-.poster-thumb:focus, .poster-text {
+.poster-thumb:hover.poster-text,
+.poster-thumb:focus.poster-text {
   transform: translateY(0%);
 }
 
