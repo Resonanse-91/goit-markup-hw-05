@@ -638,7 +638,7 @@ img {
 
 .poster-thumb:hover.poster-text,
 .poster-thumb:focus.poster-text {
-  transform: translateY(0%);
+  transform: translateY(100%);
 }
 
 .actions-list {
